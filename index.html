@@ -243,8 +243,9 @@ if (OL_result) {
       var adset = { keys: ["adset_name"], defaultValue: "game_adset_name" };
       // extracting parameters for facebook click
       var afSub2 = { keys: ["fbclid"] };
-      var fbclid_out = {paramKey: "fbclid", keys: ["fbclid"]};
-      var googleClickIdKey = "gclid";
+      var googleClickIdKey = "af_sub4";
+      var gclid_out = { paramKey: "gclid", keys: ["gclid"] } 
+      var fbclid_out = { paramKey: "fbclid", keys: ["fbclid"] } 
 
       var afParameters = {
         mediaSource: mediaSource,
@@ -257,6 +258,7 @@ if (OL_result) {
           // !!! IMPORTANT !!!
           // The following param is mandatory for cross-platform impression. MUST BE ADDED
           { paramKey: "af_xplatform", keys: [], defaultValue: "true" },
+          gclid_out,
           fbclid_out
         ],
       };
